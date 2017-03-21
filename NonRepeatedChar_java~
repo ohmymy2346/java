@@ -1,0 +1,47 @@
+/**
+ * 
+ * Given a String find the first occurrence of a non-repeated character.
+ * 
+ * For example:
+ * 
+ * airplane -> 'i' 
+ * llama -> 'm'
+ * toot -> null
+ * 
+ */
+
+import java.util.Scanner;
+
+public class NonRepeatedChar_java {
+	public static void getFirstNotRepeatedChar(String s) {
+	{
+
+	    int count=0;
+	    
+
+	    for (int i = 0; i < s.length(); i++) {
+	    	count = 0 ;
+	        for (int j = 0; j < s.length(); j++) {
+
+	            if(s.charAt(i)==s.charAt(j)) count++;
+	            
+	        }   
+	        if (count==1)
+	        {
+	        	System.out.println("result is --- "+s.charAt(i));
+	        	break;
+	        }
+	    }
+
+	if (count!=1) System.out.println("null");
+	}
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter a string :");
+		String str=sc.nextLine();
+		getFirstNotRepeatedChar(str);
+}
+}
